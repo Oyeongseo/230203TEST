@@ -22,6 +22,8 @@ public interface BoardMapper {
 
 	@Select("select * from tbl_board where bno>0")
 	public List<BoardVO> getList();
+	
+	
 	@Insert
 	("insert into tbl_board(bno,title,content,writer) values(#{bno}, #{title},#{content},#{writer})")
 	public void insert(BoardVO board);
